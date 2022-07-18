@@ -16,9 +16,13 @@ A basic social media database and its queries, implemented using the PostgreSQL 
 # Database schema
 Here is the database model, made with Jet Brain's Datagrip. It includes 5 tables : Account, Send_invites, Post, React_post, and Message. 
 
-![alt text](https://github.com/tokyramarozaka/social-media/blob/main/assets/Diagram.png)
+![alt text](https://github.com/amourramanantsiresy/social-media/blob/main/assets/Diagram.png)
 
 # Practice assignements
 1. Create a FakerJS script to generate 250_000 accounts like in `initializeMock.sql` file
 2. On which column would you add indexes and why ? 
 3. Compare the performance difference of some queries when you have put all of your indexes VS. when it has no index at all.
+
+# Mock data creation
+The [initializeMock.sql](https://github.com/amourramanantsiresy/social-media/blob/main/initializeMock) was created with Faker Js. 
+You can see the code in the file [mockCreator.js](https://github.com/amourramanantsiresy/social-media/blob/main/mockCreator.js)
