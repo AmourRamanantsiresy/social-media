@@ -15,7 +15,6 @@ function createAccount(n) {
         let nickname = name.findName().replaceAll("'", "\'");
         let gender = Math.random() > .5 ? "h" : "f";
         let birthdate = `${formatNumber(birthday.getFullYear())}-${formatNumber(birthday.getMonth())}-${formatNumber(birthday.getDay())}`;
-        let profile_pic = internet.url();
         insertion += `('${first_name}','${last_name}','${nickname}','${birthdate}','${gender}','${first_name}.${last_name + random.numeric(6)}@gmail.com','${first_name}.png'),\n`;
     }
 
