@@ -1,7 +1,7 @@
 import { faker } from "@faker-js/faker";
 import fs from "final-fs";
 
-const { date, name, internet, } = faker;
+const { date, name, random } = faker;
 
 function createAccount(n) {
     let insertion = `INSTER INTO account
@@ -16,7 +16,7 @@ function createAccount(n) {
         let gender = Math.random() > .5 ? "h" : "f";
         let birthdate = `${formatNumber(birthday.getFullYear())}-${formatNumber(birthday.getMonth())}-${formatNumber(birthday.getDay())}`;
         let profile_pic = internet.url();
-        insertion += `('${first_name}','${last_name}','${nickname}','${birthdate}','${gender}','${first_name}.${last_name}@gmail.com','${profile_pic}'),\n`;
+        insertion += `('${first_name}','${last_name}','${nickname}','${birthdate}','${gender}','${first_name}.${last_name + random.numeric(6)}@gmail.com','${first_name}.png'),\n`;
     }
 
     return insertion.slice(0, insertion.length - 1) + ';';
